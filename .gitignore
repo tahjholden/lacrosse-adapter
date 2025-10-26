@@ -1,0 +1,13 @@
+node_modules
+.build
+.svelte-kit
+.vite
+.env
+.env.*
+.DS_Store
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+supabase/.temp
+.idea
+.vscode

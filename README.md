@@ -1,68 +1,54 @@
-# Lacrosse Vertical - Complete Replication of mpb_e
+# Momentum Lacrosse Platform
 
-**This project replicates the ENTIRE mpb_e (Max Potential Player Development) application for lacrosse.**
+This repository adapts the Momentum Performance Basketball (mpb_e) stack for the lacrosse vertical.
+It is a full-stack TypeScript + SvelteKit workspace backed by a Supabase/PostgreSQL schema named
+`mp_lacrosse`. The long-term goal is to deliver feature parity with the basketball implementation
+and add lacrosse-specific enhancements across analytics, training, and club operations.
 
-## Mission
-
-Create a complete, production-ready lacrosse vertical application that replicates ALL 22 production systems from mpb_e, adapted for lacrosse instead of basketball.
-
-### Reference Implementation
-- **Source**: [mpb_e](https://github.com/tahjholden/mpb_e)
-- **Type**: Basketball vertical application  
-- **Architecture**: Full-stack TypeScript/SvelteKit + Supabase + HOS Protocol Stack
-- **Status**: 22 production systems, 80+ tables, deployed to Vercel
-
-## What This Includes (Complete Replication)
-
-- ✅ Complete SvelteKit application with all routes and pages
-- ✅ Complete Supabase schema `mp_lacrosse` (mirroring mp_basketball)
-- ✅ All database migrations
-- ✅ Complete component library (50+ components)
-- ✅ Player, team, and coach management
-- ✅ Practice planning and session builder with AI
-- ✅ Drill system with lacrosse drills imported
-- ✅ Development plan system
-- ✅ Observation & analytics system
-- ✅ Portal system (players and parents)
-- ✅ AI integration and HOS protocol integration
-- ✅ Real-time features
-- ✅ Complete authentication and RBAC
-- ✅ Voice observation system
-- ✅ Smart surfacing system
-- ✅ All infrastructure features
-- ✅ Testing infrastructure
-
-## Authentication
-
-- **Superadmin**: tahjholden@gmail.com
-- Same login credentials as mpb_e
-- Mock data for players, coaches, and teams
-
-## Database
-
-- **Schema**: `mp_lacrosse` (Supabase)
-- All data lives in `mp_lacrosse` schema
-- Mirrors mp_basketball schema structure
-- Lacrosse fundamentals and drills imported from knowledge base
-
-## Lacrosse-Specific Enhancements
-
-- **Positions**: Goalie, Attack, Midfield, Defense
-- **Stick Skills**: Cradling, catching, passing, shooting
-- **Ground Balls**: Analytics and training
-- **Face-offs**: Draw control management
-- **Field Zones**: 8-meter arc, goal circle, midfield
+> **Status:** Project scaffolding is in progress. The current snapshot includes the SvelteKit
+> workspace, initial Supabase schema migration, and seed data for core lacrosse drill categories.
 
 ## Getting Started
 
+Install dependencies and start the development server:
+
 ```bash
-pnpm install
-pnpm dev
+npm install
+npm run dev -- --open
 ```
 
-## For AI Development Agents
+Additional scripts:
 
-See `DEVELOPMENT_CONTEXT.md` for complete instructions on replicating mpb_e.
+| Command | Description |
+| --- | --- |
+| `npm run build` | Create a production build using Vite. |
+| `npm run preview` | Preview the production build locally. |
+| `npm run check` | Run `svelte-check` with synced types. |
+| `npm run lint` | Execute Biome static analysis. |
+| `npm run format` | Format files with Biome. |
 
-This is NOT a simple mapping. You must replicate EVERYTHING from mpb_e, enhanced for lacrosse.
+## Supabase Schema
 
+Database definitions live under `supabase/migrations`. The initial migration creates the
+`mp_lacrosse` schema with organizations, coaches, athletes, drills, drill sessions, and performance
+snapshots tailored to lacrosse terminology. Seed data for skill categories and representative drills
+can be found in `supabase/seed/001_base_data.sql`.
+
+## Frontend Architecture
+
+The SvelteKit app (located in `src/`) will expand to mirror the mpb_e experience:
+
+- Modular routes for admin, coach, athlete, and parent portals.
+- Component library for drills, practice planning, analytics, and communications.
+- Real-time and offline-first capabilities for session tracking.
+
+The landing page currently outlines the product pillars while deeper functionality is built out.
+
+## Next Steps
+
+1. Port Supabase authentication, row-level security, and storage policies from mpb_e.
+2. Scaffold core application routes (dashboard, training plans, practice builder).
+3. Automate ingestion of the Lacrosse Fundamentals Manual into structured seed data.
+4. Layer in analytics, AI coaching assistants, and PWA features purpose-built for lacrosse.
+
+Refer to `DEVELOPMENT_CONTEXT.md` for the full scope, required systems, and quality expectations.

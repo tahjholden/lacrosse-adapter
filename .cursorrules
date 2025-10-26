@@ -1,0 +1,69 @@
+# Lacrosse Vertical Development Rules
+
+## Mission: Complete Replication of mpb_e
+You are building the COMPLETE mpb_e application for lacrosse. This is NOT a simple adaptation - it's a full replication of all 22 production systems with enhancements.
+
+## Reference Implementation
+- **Primary**: https://github.com/tahjholden/mpb_e
+- **Study**: Read mpb_e's PROJECT_CONTEXT.md for complete architecture
+- **Replicate**: EVERYTHING from mpb_e
+
+## Critical Instructions
+
+### 1. Complete Application Replication
+- Copy ENTIRE mpb_e structure
+- All routes, components, services, utilities
+- All database tables and migrations
+- All AI integrations and HOS protocols
+- Complete component library (50+ components)
+- All infrastructure features
+
+### 2. Schema Changes ONLY
+- `mp_basketball` → `mp_lacrosse` (everywhere)
+- Schema: `mp_lacrosse` (mirror mp_basketball structure)
+- Basketball → Lacrosse domain translation
+- Same table structures, different content
+
+### 3. Lacrosse-Specific Enhancements
+- Position-specific training (Goalie, Attack, Midfield, Defense)
+- Stick skills fundamentals (cradling, ground balls, shooting)
+- Face-off management
+- Field zone analytics
+- Lacrosse-specific drill library
+
+### 4. Authentication Setup
+- Superadmin: tahjholden@gmail.com
+- Same login credentials as mpb_e
+- Mock players, coaches, and teams
+
+### 5. Knowledge Base Import
+- Import Lacrosse Fundamentals Manual
+- Create structured skill/drill database
+- Map to development frameworks (Traditional, CLA, Learning Journey)
+
+### 6. What NOT to Do
+- DON'T create simplified version
+- DON'T skip features
+- DON'T create "mapping" approach
+- DON'T overlook any of the 22 systems
+- DON'T skip infrastructure features
+- DON'T skip testing
+
+## Code Standards
+- Follow mpb_e's code style EXACTLY
+- Use same library versions
+- Maintain exact file structure
+- Keep naming conventions consistent
+- Replicate all components and services
+
+## Deliver Complete Production-Ready Application
+- All features from mpb_e
+- Lacrosse-specific enhancements
+- Working authentication
+- Mock data for testing
+- Complete Supabase integration
+- All AI features
+- All real-time features
+- Complete portal system
+- Testing infrastructure
+
